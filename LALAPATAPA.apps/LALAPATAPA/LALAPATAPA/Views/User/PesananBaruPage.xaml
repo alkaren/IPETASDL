@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:Controls="clr-namespace:LALAPATAPA.Controls"
+	xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+	x:Class="LALAPATAPA.Views.User.PesananBaruPage"
+			 BackgroundColor="#E6FFF2">
+	<NavigationPage.TitleView>
+		<Image Source="logohuruf.png"
+			   VerticalOptions="CenterAndExpand"
+			   HorizontalOptions="Start" />
+	</NavigationPage.TitleView>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Clicked="OnNotify_Clicked" Name="iconexample" Icon="notif.png" Priority="0" Order="Primary" />
+	</ContentPage.ToolbarItems>
+	<StackLayout Padding="15,0,15,10">
+	<ScrollView>
+			<StackLayout Padding="20,10,20,10" VerticalOptions="Center">
+				<StackLayout Padding="0,15,0,15">
+					<Label HorizontalOptions="Start" FontAttributes="Bold" Text="Pesanan Baru" TextColor="#27A761" HorizontalTextAlignment="Start" FontSize="25"></Label>
+				</StackLayout>
+				<StackLayout x:Name="slJenisPeta">
+					<Label HorizontalOptions="Start" Text="Jenis Peta" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<input:Dropdown
+						x:Name="cbJenisPeta"
+						AnnotationColor="Accent" 
+						IsRequired="True" 
+						BorderColor="#27A761" 
+						Color="#27A761"
+						Placeholder="Pilih Jenis Peta"
+						HorizontalOptions="Center"                    
+						VerticalOptions="Center"
+						WidthRequest="300"
+						PlaceholderColor="Black"/>
+				</StackLayout>
+				<StackLayout x:Name="slSkala">
+					<Label HorizontalOptions="Start" Text="Skala" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<input:Dropdown
+						x:Name="cbSkala"
+						AnnotationColor="Accent" 
+						IsRequired="True" 
+						BorderColor="#27A761" 
+						Color="#27A761"
+						Placeholder="Pilih Skala"
+						HorizontalOptions="Center"
+						VerticalOptions="Center"
+						WidthRequest="300"
+						PlaceholderColor="Black"/>
+				</StackLayout>
+				<StackLayout x:Name="slKomoditas">
+					<Label HorizontalOptions="Start" Text="Komoditas" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" BorderColor="#33B872">
+						<Controls:XEntry x:Name="txtKomoditas" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="Tulis Komoditas" VerticalOptions="Center"></Controls:XEntry>
+					</Frame>
+				</StackLayout>
+				<StackLayout x:Name="slPropinsi">
+					<Label HorizontalOptions="Start" Text="Propinsi" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<input:Dropdown
+						x:Name="cbPropinsi"
+						AnnotationColor="Accent" 
+						IsRequired="True" 
+						BorderColor="#27A761" 
+						Color="#27A761"
+						Placeholder="Pilih Propinsi"
+						HorizontalOptions="Center"
+						VerticalOptions="Center"
+						WidthRequest="300"
+						PlaceholderColor="Black"
+						SelectedItemChanged="CbPropinsi_SelectedItemChanged"/>
+				</StackLayout>
+				<StackLayout x:Name="slKabupaten">
+					<Label HorizontalOptions="Start" Text="Kota / Kabupaten" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<input:Dropdown
+						x:Name="cbKabupaten"
+						AnnotationColor="Accent" 
+						IsRequired="True" 
+						BorderColor="#27A761" 
+						Color="#27A761"
+						Placeholder="Pilih Kota / Kabupaten"
+						HorizontalOptions="Center"
+						VerticalOptions="Center"
+						WidthRequest="300"
+						PlaceholderColor="Black"/>
+				</StackLayout>
+				<StackLayout x:Name="slKecamatan">
+					<Label HorizontalOptions="Start" Text="Kecamatan" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" BorderColor="#33B872">
+						<Controls:XEntry x:Name="txtKecamatan" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="Tulis Kecamatan" VerticalOptions="Center"></Controls:XEntry>
+					</Frame>
+				</StackLayout>
+				<StackLayout x:Name="slPesanan">
+					<Label HorizontalOptions="Start" Text="Pesanan" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" BorderColor="#33B872">
+						<Controls:XEditor x:Name="txtPesanan" Margin="-5,-15,-10,-15" HeightRequest="150" TextColor="Black" PlaceholderColor="Default" Placeholder="Tulis Pesanan anda" VerticalOptions="Center"></Controls:XEditor>
+					</Frame>
+				</StackLayout>
+				<StackLayout x:Name="slTujuan">
+					<Label HorizontalOptions="Start" Text="Tujuan penggunaan peta" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+					<Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" BorderColor="#33B872">
+						<Controls:XEditor x:Name="txtTujuan" Margin="-5,-15,-10,-15" HeightRequest="150" TextColor="Black" PlaceholderColor="Default" Placeholder="Tulis Tujuan anda" VerticalOptions="Center"></Controls:XEditor>
+					</Frame>
+				</StackLayout>
+				<Label HorizontalOptions="Start" Text="Upload File" TextColor="Black" HorizontalTextAlignment="Start" FontSize="18" FontAttributes="Bold"></Label>
+				<StackLayout Padding="0,25,0,0">
+					<Button x:Name="btnAmbil" VerticalOptions="End" Clicked="Ambil_Clicked" CornerRadius="10" Text="Upload File SHV" TextColor="White" HeightRequest="50" BackgroundColor="#23A761"></Button>
+					<Label x:Name="FileNameLabel" TextColor="Black" VerticalOptions="Center" Text="Pastikan file SHV  berformat .zip atau .pdf" HorizontalOptions="Center" />
+				</StackLayout>
+				<StackLayout Padding="0,25,0,0">
+					<Button x:Name="btnUpload" IsVisible="False" Clicked="BtnUpload_Clicked" VerticalOptions="End" CornerRadius="10" Text="Upload File" TextColor="White" HeightRequest="50" BackgroundColor="#23A761"></Button>
+				</StackLayout>
+				<StackLayout Padding="0,10,0,0">
+					<Button VerticalOptions="End" Clicked="Pesan_Clicked" CornerRadius="10" Text="Pesan" TextColor="White" HeightRequest="50" BackgroundColor="#23A761"></Button>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+		<Frame AbsoluteLayout.LayoutBounds=".5,1,.5,.1" HeightRequest="35" AbsoluteLayout.LayoutFlags="All" CornerRadius="5" BackgroundColor="#23A761">
+			<Grid>
+				<StackLayout Grid.Row="0">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnTappedIconHome"/>
+					</StackLayout.GestureRecognizers>
+					<Image Source="home.png" VerticalOptions="Center" HorizontalOptions="Start"></Image>
+				</StackLayout>
+				<StackLayout Grid.Row="0" Grid.Column="1">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnTappedIconBaru"/>
+					</StackLayout.GestureRecognizers>
+					<Image Source="baruwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+				</StackLayout>
+				<StackLayout Grid.Row="0" Grid.Column="2">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnTappedIconProses"/>
+					</StackLayout.GestureRecognizers>
+					<Image Source="proseswhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+				</StackLayout>
+				<StackLayout Grid.Row="0" Grid.Column="3">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnTappedIconSelesai"/>
+					</StackLayout.GestureRecognizers>
+					<Image Source="selesaiwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+				</StackLayout>
+				<StackLayout Grid.Row="0" Grid.Column="4">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnTappedIconAkun"/>
+					</StackLayout.GestureRecognizers>
+					<Image Source="profilewhite.png" VerticalOptions="Center" HorizontalOptions="End"></Image>
+				</StackLayout>
+			</Grid>
+		</Frame>
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:LALAPATAPA.Controls"
+             x:Class="LALAPATAPA.Views.Admin.RincianProsesLIAPage"
+             BackgroundColor="#E6FFF2">
+    <NavigationPage.TitleView>
+        <Image Source="logohuruf.png"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start" />
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnNotify_Clicked" Name="iconexample" Icon="notif.png" Priority="0" Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="15,10,15,10">
+            <ScrollView>
+                <StackLayout>
+                    <Label x:Name="lblId" Margin="0,10,0,0" FontSize="Large" TextColor="#23A761" HorizontalOptions="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="{Binding TransactionNumber, StringFormat='Pesanan {0}'}" VerticalOptions="Start" />
+                    <StackLayout Padding="0,10,0,0">
+                        <Frame x:Name="frmStatus" BackgroundColor="#23A761" CornerRadius="10" HorizontalOptions="Center">
+                            <Label x:Name="lblStatus" Margin="-10,-15,-10,-15" Text="{Binding TransactionStatus}" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White"/>
+                        </Frame>
+                    </StackLayout>
+                    <Grid>
+                        <StackLayout Padding="0,20,0,0">
+                            <Label FontSize="17" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Tanggal Pesanan" VerticalOptions="Start" />
+                            <Frame VerticalOptions="Center" CornerRadius="10" WidthRequest="80" HeightRequest="20" BackgroundColor="White" HasShadow="True">
+                                <Label x:Name="lblDate" Margin="-10,-10,-10,-10" VerticalOptions="Center" HorizontalOptions="Center" Text="" FontSize="17" FontAttributes="Bold" TextColor="Black"/>
+                            </Frame>
+                            <Label FontSize="17" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Data Pemesan" VerticalOptions="Start" />
+                            <Frame VerticalOptions="Center" CornerRadius="10" WidthRequest="80" HeightRequest="120" BackgroundColor="White" HasShadow="True">
+                                <Grid>
+                                    <StackLayout Margin="-5,0,-65,0" Grid.Row="0">
+                                        <Label Margin="0,0,0,-5" Text="Nama" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-5,0,-65,0" Grid.Row="1">
+                                        <Label Margin="0,0,0,-5" Text="No Telp" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-5,0,-65,0" Grid.Row="2">
+                                        <Label Margin="0,0,0,-5" Text="Email" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-5,0,-65,-5" Grid.Row="3">
+                                        <Label Margin="0,0,0,-5" Text="Instansi" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <!--<>-->
+                                    <StackLayout Margin="-65,0,-5,0" Grid.Row="0" Grid.Column="1">
+                                        <Label x:Name="lblName" Margin="0,0,0,-5" Text="" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-65,0,-5,0" Grid.Row="1" Grid.Column="1">
+                                        <Label x:Name="lblNohp" Margin="0,0,0,-5" Text="" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-65,0,-5,0" Grid.Row="2" Grid.Column="1">
+                                        <Label x:Name="lblEmail" Margin="0,0,0,-5" Text="" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout Margin="-65,0,-5,-5" Grid.Row="3" Grid.Column="1">
+                                        <Label x:Name="lblComp" Margin="0,0,0,-5" Text="" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                            <Label FontSize="17" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Detail Pesanan" VerticalOptions="Start" />
+                            <StackLayout>
+                                <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="0">
+                                                <Label Margin="0,0,0,-5" Text="Jenis Peta" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="1">
+                                                <Label Margin="0,0,0,-5" Text="Skala" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="2">
+                                                <Label Margin="0,0,0,-5" Text="Komoditas" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,-5" Grid.Row="3">
+                                                <Label Margin="0,0,0,-5" Text="Propinsi" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="4">
+                                                <Label Margin="0,0,0,-5" Text="Kota / Kabupaten" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="5">
+                                                <Label Margin="0,0,0,-5" Text="Kecamatan" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            </StackLayout>
+                                            <!--<>-->
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="0" Grid.Column="1">
+                                                <Label x:Name="lbltype" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="1" Grid.Column="1">
+                                                <Label x:Name="lblskala" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="2" Grid.Column="1">
+                                                <Label x:Name="lblcomodity" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,-5" Grid.Row="3" Grid.Column="1">
+                                                <Label x:Name="lblprov" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" />
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="4" Grid.Column="1">
+                                                <Label x:Name="lblcity" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            </StackLayout>
+                                            <StackLayout Margin="-5,0,-5,0" Grid.Row="5" Grid.Column="1">
+                                                <Label x:Name="lblsubd" Margin="0,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            </StackLayout>
+                                        </Grid>
+                                        <StackLayout VerticalOptions="End">
+                                            <Label Margin="-5,0,0,-5" Text="Pesanan" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            <Controls:XEditor x:Name="lblpesan" Margin="-5,0,0,-5" Text="" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black" AutoSize="TextChanges"></Controls:XEditor>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout x:Name="slTujuan">
+                                <Label x:Name="lblTujuan" FontSize="17" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Tujuan Pemesanan" VerticalOptions="Start" />
+                                <Frame x:Name="frmTujuan" VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                                    <StackLayout IsEnabled="False">
+                                        <Label x:Name="txtTujuan" TextColor="Black">Tidak Ada Tujuan</Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <Label x:Name="lblRincianHarga" FontSize="17" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Rincian Harga" VerticalOptions="Start" />
+                            <Frame x:Name="frmRincianHarga" VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                                <StackLayout>
+                                    <Label x:Name="lblBelumAda" Margin="-10,-10,-10,-10" VerticalOptions="Center" HorizontalOptions="Center" Text="Belum ada" FontSize="17" FontAttributes="Bold" TextColor="Black"/>
+                                    <StackLayout x:Name="EditorKeterangan" IsVisible="False">
+                                        <Controls:XEditor Margin="-5,0,0,-5" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"></Controls:XEditor>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StkRincianHarga">
+                                        <Grid>
+                                            <StackLayout>
+                                                <Label Text="Total" VerticalOptions="Start" HorizontalOptions="Start" FontSize="17" TextColor="Black"></Label>
+                                                <Label x:Name="lblHarga" Margin="0,-30,30,0" VerticalOptions="Start" HorizontalOptions="End" FontSize="17" TextColor="Black"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <Frame AbsoluteLayout.LayoutBounds=".5,1,.5,.1" HeightRequest="35" AbsoluteLayout.LayoutFlags="All" CornerRadius="5" BackgroundColor="#23A761">
+                <Grid>
+                    <StackLayout Grid.Row="0">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconHome"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="home.png" VerticalOptions="Center" HorizontalOptions="Start"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconBaru"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="baruwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="2">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconProses"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="proseswhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="3">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconSelesai"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="selesaiwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="4">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconAkun"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="profilewhite.png" VerticalOptions="Center" HorizontalOptions="End"></Image>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

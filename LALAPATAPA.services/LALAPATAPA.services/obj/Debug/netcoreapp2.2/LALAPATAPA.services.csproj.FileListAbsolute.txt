@@ -1,0 +1,11 @@
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\bin\Debug\netcoreapp2.2\LALAPATAPA.services.deps.json
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\bin\Debug\netcoreapp2.2\LALAPATAPA.services.runtimeconfig.json
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\bin\Debug\netcoreapp2.2\LALAPATAPA.services.runtimeconfig.dev.json
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\bin\Debug\netcoreapp2.2\LALAPATAPA.services.dll
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.csprojAssemblyReference.cache
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.csproj.CoreCompileInputs.cache
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.RazorAssemblyInfo.cache
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.RazorAssemblyInfo.cs
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.AssemblyInfoInputs.cache
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.AssemblyInfo.cs
+C:\Users\alkar\OneDrive\Documents\Jobs\BalitTanah.Lalatapa\LALAPATAPA.services\LALAPATAPA.services\obj\Debug\netcoreapp2.2\LALAPATAPA.services.RazorTargetAssemblyInfo.cache

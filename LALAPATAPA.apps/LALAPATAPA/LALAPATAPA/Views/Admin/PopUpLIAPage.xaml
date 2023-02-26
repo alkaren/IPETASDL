@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LALAPATAPA.Views.Admin.PopUpLIAPage">
+    <StackLayout Padding="20,10,20,10" VerticalOptions="Center" HorizontalOptions="Center">
+        <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="#23A761" HasShadow="True">
+            <StackLayout Padding="10,10,10,10">
+                <Label Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="Center" Text="Pesanan berhasil&#x0a;dikirimkan ke LIA" TextColor="White" HorizontalTextAlignment="Center" FontSize="25"></Label>
+                <Button VerticalOptions="Center" CornerRadius="10" Clicked="OnLanjutkan_Clicked" Text="Lanjutkan" TextColor="Black" HeightRequest="50" BackgroundColor="White"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

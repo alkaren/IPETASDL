@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LALAPATAPA"
+             xmlns:Controls="clr-namespace:LALAPATAPA.Controls"
+             x:Class="LALAPATAPA.Views.User.MainPage" BackgroundColor="#E6FFF2">
+    <NavigationPage.TitleView>
+        <Image Source="logohuruf.png"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start" />
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnNotify_Clicked" Name="iconexample" Icon="notif.png" Priority="0" Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="30,20,30,20">
+        <StackLayout Padding="0,0,0,20">
+            <Label x:Name="CurrentUser" Text="Hai, user" FontAttributes="Bold" FontSize="25" HorizontalOptions="Start" VerticalOptions="Start" TextColor="#23A761" />
+        </StackLayout>
+        <Grid>
+            <Frame VerticalOptions="Start" HorizontalOptions="Start" CornerRadius="10" WidthRequest="100" HeightRequest="100" BackgroundColor="White" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedBaru"/>
+                    </StackLayout.GestureRecognizers>
+                        <!--<Frame Margin="0,-30,-35,0" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="-15" HeightRequest="-15" CornerRadius="50" BackgroundColor="#23A761">
+                        <Controls:XEntry Margin="-35,-35,-20,-20" HorizontalOptions="Center" TextColor="White" Text="4" FontSize="15" VerticalOptions="Center"></Controls:XEntry>
+                        </Frame>-->
+                        <Image Margin="-20,-10,-20,0" Source="pesananbaru.png" WidthRequest="70" HeightRequest="70" ></Image>
+                        <Label Margin="-20,0,-20,-20" HorizontalOptions="Center" Text="Pesanan Baru" FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="End" FontAttributes="Bold" TextColor="Black"/>
+                    </StackLayout>
+            </Frame>
+            <Frame Margin="0,10,0,0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" CornerRadius="10" WidthRequest="100" HeightRequest="100" BackgroundColor="White" HasShadow="True">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedSelesai"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame Margin="0,-30,-25,0" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="-15" HeightRequest="-15" CornerRadius="50" BackgroundColor="#23A761">
+                        <Label x:Name="icoSelesai" Margin="-35,-35,-20,-20" HorizontalOptions="Center" TextColor="White" Text="0" FontSize="15" VerticalOptions="Center"/>
+                    </Frame>
+                    <Image Margin="-20,-10,-20,0" Source="selesai.png" WidthRequest="70" HeightRequest="70" ></Image>
+                    <Label Margin="-20,0,-20,-20" HorizontalOptions="Center" Text="Pesanan Selesai" FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="End" FontAttributes="Bold" TextColor="Black"/>
+                    </StackLayout>
+            </Frame>
+            <Frame Margin="0,10,0,0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Start" CornerRadius="10" WidthRequest="100" HeightRequest="100" BackgroundColor="White" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedFeedBack"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Margin="-20,-10,-20,0" Source="selesai.png" WidthRequest="70" HeightRequest="70" ></Image>
+                    <Label Margin="-20,0,-20,-20" HorizontalOptions="Center" Text="FeedBack" FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="End" FontAttributes="Bold" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Column="1" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" CornerRadius="10" WidthRequest="100" HeightRequest="100" BackgroundColor="White" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedProses"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame Margin="0,-30,-20,0" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="-15" HeightRequest="-15" CornerRadius="50" BackgroundColor="#23A761">
+                        <Label x:Name="icoProses" Margin="-35,-35,-20,-20" HorizontalOptions="Center" TextColor="White" Text="0" FontSize="15" VerticalOptions="Center"/>
+                    </Frame>
+                    <Image Margin="-20,-10,-20,0" Source="proses.png" WidthRequest="70" HeightRequest="70" ></Image>
+                    <Label Margin="-20,0,-20,-20" HorizontalOptions="Center" Text="Pesanan Diproses" FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="End" FontAttributes="Bold" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <Frame Margin="0,10,0,0" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="End" CornerRadius="10" WidthRequest="100" HeightRequest="100" BackgroundColor="White" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedAkun"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="akun.png" WidthRequest="70" HeightRequest="70" ></Image>
+                    <Label Margin="-20,0,-20,-20" HorizontalOptions="Center" Text="Akun" FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="End" FontAttributes="Bold" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </StackLayout>
+</ContentPage>

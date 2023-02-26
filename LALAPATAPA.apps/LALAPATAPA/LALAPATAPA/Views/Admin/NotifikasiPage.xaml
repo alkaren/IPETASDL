@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LALAPATAPA.Views.Admin.NotifikasiPage"
+             BackgroundColor="#23A761"
+             NavigationPage.HasBackButton="False" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="20,10,20,0">
+            <Label Margin="0,10,0,0" FontSize="Large" TextColor="White" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Notifikasi" VerticalOptions="Start" />
+            <StackLayout>
+                <ListView x:Name="notificationlist" SeparatorVisibility="None" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <StackLayout Padding="0,10,0,0">
+                                        <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                                            <Grid>
+                                                <StackLayout Margin="-5,-10,-5,-10" Grid.Row="0">
+                                                    <Label Margin="0,-5,0,-5" Text="{Binding IdTransaction, StringFormat='Transaksi dengan nomor {0}'}" VerticalOptions="Start" HorizontalOptions="Start" FontSize="18" TextColor="Black"/>
+                                                    <Label Text="{Binding Message}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                                    <Label Text="{Binding Time}" FontSize="15" TextColor="#888888" HorizontalOptions="Start"  VerticalOptions="End"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout Padding="85,0,85,15">
+                <Button Clicked="OnTutup_Clicked" AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All" Text="Tutup" CornerRadius="15" BackgroundColor="White" TextColor="#23A761"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:LALAPATAPA.Controls"
+             x:Class="LALAPATAPA.Views.User.RegisterPage"
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout Padding="20,10,20,10" VerticalOptions="Center">
+            <StackLayout Padding="0,15,0,30">
+                <Label HorizontalOptions="Start" Text="Hi, silahkan&#x0a;melakukan&#x0a;registrasi" TextColor="#33B872" HorizontalTextAlignment="Start" FontSize="25"></Label>
+            </StackLayout>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtName" MaxLength="20" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="Nama" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtPhone" Keyboard="Telephone" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="No Telp" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtEmail" Keyboard="Email" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="Email" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtCompany" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="Perusahaan / Instansi" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtIdentity" Keyboard="Numeric" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" Placeholder="No KTP" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <Frame VerticalOptions="Center" CornerRadius="10" BackgroundColor="Transparent" BorderColor="#33B872">
+                <Controls:XEntry x:Name="txtPassword" MaxLength="10" Margin="-5,-15,-10,-15" TextColor="Black" PlaceholderColor="Default" IsPassword="True" Placeholder="Password" VerticalOptions="Center"></Controls:XEntry>
+            </Frame>
+            <StackLayout Padding="0,25,0,0">
+                <Button x:Name="BtnDaftar" VerticalOptions="End" Clicked="Daftar_Clicked" CornerRadius="10" Text="Daftar" TextColor="White" HeightRequest="50" BackgroundColor="#33B872"></Button>
+                <Button VerticalOptions="End" CornerRadius="10" Clicked="OnBack_Clicked" Text="Kembali" TextColor="White" HeightRequest="50" BackgroundColor="#33B872"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

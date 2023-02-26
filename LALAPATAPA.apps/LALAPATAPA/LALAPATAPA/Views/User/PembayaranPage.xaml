@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LALAPATAPA.Views.User.PembayaranPage"
+             BackgroundColor="#E6FFF2">
+    <NavigationPage.TitleView>
+        <Image Source="logohuruf.png"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start" />
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnNotify_Clicked" Name="iconexample" Icon="notif.png" Priority="0" Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20,10,20,10">
+            <StackLayout x:Name="StkPembayaran">
+                <Label Margin="0,10,0,0" FontSize="Large" TextColor="#23A761" HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Konfirmasi&#x0a;Pembayaran" VerticalOptions="Start" HorizontalOptions="Start" />
+                <Label x:Name="TransNoPembayaranPage" Margin="0,-40,0,0" FontSize="Large" TextColor="#23A761" FontAttributes="Bold" Text="#09898" VerticalOptions="Start" HorizontalOptions="End" />
+                <Label Margin="0,25,0,20" Text="Foto / Screenshot bukti Resi transfer" FontSize="17" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                <Frame x:Name="frmImg" Padding="0" Margin="0" WidthRequest="250" HeightRequest="200" BackgroundColor="White" HorizontalOptions="Center" CornerRadius="20">
+                    <Image x:Name="ImgPayment" Aspect="AspectFill" Source="defaultpic.png"></Image>
+                </Frame>
+                <Button x:Name="BtnAmbil" Clicked="OnAmbil_Clicked" Margin="0,20,0,0" Text="Ambil Foto" BackgroundColor="#23A761" TextColor="White" CornerRadius="20"></Button>
+                <Button x:Name="BtnUpload" Clicked="OnUpload_Clicked" IsVisible="False" Margin="0,20,0,0" Text="Upload Foto" BackgroundColor="#23A761" TextColor="White" CornerRadius="20"></Button>
+                <Button x:Name="BtnKonfirmasi" Clicked="OnKonfirmasi_Clicked" Margin="0,5,0,0" Text="Konfirmasi" IsEnabled="False" BackgroundColor="#23A761" TextColor="White" CornerRadius="20"></Button>
+            </StackLayout>
+            <StackLayout x:Name="StkLanjutkan" Padding="10,20,10,10" IsVisible="False">
+                <Frame WidthRequest="80" HeightRequest="80" CornerRadius="15" BackgroundColor="White">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label FontSize="17" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Konfirmasi pembayaran untuk&#x0a;pembelian peta dengan no"></Label>
+                        <Label x:Name="txtknfrm" Margin="0,-5,0,0" FontSize="17" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text=""></Label>
+                    </StackLayout>
+                </Frame>
+                <Button Clicked="OnLanjutkan_Clicked" Margin="0,5,0,0" Text="Lanjutkan" BackgroundColor="#23A761" TextColor="White" CornerRadius="20"></Button>
+            </StackLayout>
+            <Frame AbsoluteLayout.LayoutBounds=".5,1,.5,.1" HeightRequest="35" VerticalOptions="End" AbsoluteLayout.LayoutFlags="All" CornerRadius="5" BackgroundColor="#23A761">
+                <Grid>
+                    <StackLayout Grid.Row="0">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconHome"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="home.png" VerticalOptions="Center" HorizontalOptions="Start"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconBaru"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="baruwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="2">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconProses"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="proseswhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="3">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconSelesai"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="selesaiwhite.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="4">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedIconAkun"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="profilewhite.png" VerticalOptions="Center" HorizontalOptions="End"></Image>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
